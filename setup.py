@@ -8,7 +8,7 @@ install_requires = ['setuptools',
                     'pytz',
                     'iso8601',
                     'simplejson',
-                    'chameleon == 2.4.5',
+                    'chameleon',
                     'pyramid',
                     'pyramid_tm',
                     'pyramid_beaker',
@@ -52,7 +52,7 @@ setup(name='ptah',
         'paste.app_factory': [
             'app = ptah:make_wsgi_app'],
         'paste.paster_create_template': [
-            'ptahdemo = ptah.cmsapp.scaffolds:StarterProjectTemplate',
+            'cmsapp = ptah.scaffolds:CMSAppProjectTemplate',
             ],
         'paste.global_paster_command': [
             'static = ptah.view.commands:StaticCommand',
